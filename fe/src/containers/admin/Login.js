@@ -3,7 +3,7 @@ import InputArea from '../../components/login/InputArea';
 class Login extends Component {
     render() {
         return (
-            <div>
+            <div className={'login-warpper'}>
                 <InputArea/>
             </div>
         );

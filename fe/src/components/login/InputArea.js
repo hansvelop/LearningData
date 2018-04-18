@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {InputGroup, Button} from '@blueprintjs/core';
+import {InputGroup} from '@blueprintjs/core';
 
 class InputArea extends Component {
     render() {
