@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../assets/logo.svg';
-import '../../styles/main/dashboard.scss';
+import '../../styles/components/main/dashboard.scss';
 
 class Dashboard extends Component {
     render() {
