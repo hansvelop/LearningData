@@ -4,8 +4,26 @@
   top: .5rem;
   margin: 0 auto;
   width: 90%;
+  height: 100vh;
+  display: table;
   @include media("<desktop"){
     width: 100%;
+  }
+  .login-area{
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    min-height: 15rem;
+    min-width: 30rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 4rem;
+    margin: auto;
+    .input-user{
+      margin-bottom: .3rem;
+    }
   }
   /*
   .center-area{
