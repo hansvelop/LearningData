@@ -19,10 +19,32 @@
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 4rem;
+    padding: 4rem 4rem 0rem 4rem;
     margin: auto;
-    .input-user{
-      margin-bottom: .3rem;
+    .logo{
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      color: lightblue;
+      padding-bottom: 1rem;
+    }
+    .left-btn{
+      width: 80%;
+      float: left;
+      padding-right: 0.3rem;
+      .input-user{
+        margin-bottom: .3rem;
+      }
+    }
+    .right-btn{
+      width:20%;
+      float: left;
+      .join{
+        font-weight:bold;
+        font-size: 20px;
+        width: 120px;
+        height: 83px;
+      }
     }
   }
   /*
