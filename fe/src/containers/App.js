@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Dashboard from './admin/Dashboard'
-import Login from './admin/Login'
+import Dashboard from './admin/Dashboard/Dashboard'
+import Login from './admin/Login/Login'
 
 class App extends Component {
   render() {
