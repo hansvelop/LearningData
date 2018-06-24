@@ -6,7 +6,7 @@ class InputArea extends Component {
     render() {
         return (
             <Card className={'login-area'} interactive={false} elevation={Elevation.THREE}>
-                <div className='logo' >LOGO</div>
+                <div className='logo' >Healthy</div>
                 <div className='left-btn'>
                     <InputGroup className={'input-user'} leftIcon={'user'} type={'text'} large={true} placeholder={'아이디'} />
                     <InputGroup leftIcon={'lock'} type={'password'} large={true} placeholder={'비밀번호'}/>
