@@ -1,1 +1,1 @@
-export {defualt} from './Paging';
+export { default } from './Paging';

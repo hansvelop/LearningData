@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import { SideArea } from 'components';
+
 class Dashboard extends Component {
     render() {
         return (
             <div>
-                dashboard
+                <SideArea />
             </div>
         );
     }
