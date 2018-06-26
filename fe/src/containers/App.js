@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Dashboard from './admin/Dashboard/Dashboard'
-import Login from './admin/Login/Login'
+import {DashboardPage, AgencyRegisterPage, LoginPage} from 'components'
 
 class App extends Component {
   render() {
     return (
       <Router>
           <div>
-              <Route exact path="/admin/login" component={Login} />
-              <Route path="/admin/dashboard" component={Dashboard} />
+              <Route exact path="/login" component={LoginPage} />
+              <Route path="/dashboard" component={DashboardPage} />
+              <Route path="/agency/register" component={AgencyRegisterPage} />
           </div>
       </Router>
     );

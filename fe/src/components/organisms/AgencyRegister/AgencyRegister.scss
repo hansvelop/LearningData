@@ -1,0 +1,11 @@
+.form-wrap {
+  width: 50% !important;
+  min-width: 30rem;
+  margin: 0 auto !important;
+  top: 5rem;
+  label{
+    .req{
+      color: red;
+    }
+  }
+}

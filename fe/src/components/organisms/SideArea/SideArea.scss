@@ -1,0 +1,97 @@
+.side-area{
+  position: fixed;
+  width: 20rem;
+  height: 100vh;
+  background-color: #3D9970;
+  .main {
+    width:5rem;
+    float: left;
+    height: 100%;
+    .icon {
+      img {
+        margin: 1rem .5rem 1rem .5rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+      }
+    }
+    .btnBg {
+      margin-left: 1rem;
+      //border-radius: 10px;
+      display: table;
+      width: 3.5rem;
+      height: 3.5rem;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &.bottom{
+        position:absolute;
+        left: 0;
+        bottom: 2rem;
+      }
+      .add-icon {
+        display: table-cell; vertical-align: middle;
+        color: #fff;
+        font-size: 30px;
+      }
+      .user-icon {
+        display: table-cell; vertical-align: middle;
+        font-size: 30px;
+        color: #fff;
+      }
+      &:hover {
+        background-color: #378461;
+        transition: all .3s ease-in-out;
+      }
+      &:active {
+        background-color: #40b384;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+  .sub {
+    width: 15rem;
+    float: left;
+    height: 100%;
+    .title {
+      font-size: 30px;
+      color: #f2f2f2;
+      margin: 1.3rem 0rem 1rem 1rem;
+    }
+    &.enable {
+      background-color: #3D9970;
+    }
+    &.disable {
+      background-color: #f2f2f2;
+    }
+
+    .menu-area{
+      margin: 1rem;
+      ul {
+        li{
+          font-size: 15px;
+          color: #fff;
+          padding: .7rem;
+          cursor:pointer;
+          border-radius: 3px;
+          transition: all .3s ease-in-out;
+          &.select{
+              background-color: #378461;
+              transition: all .3s ease-in-out;
+          }
+          &:hover{
+            background-color: #337754;
+            transition: all .3s ease-in-out;
+          }
+          &:active{
+            background-color: #40b384;
+            transition: all .3s ease-in-out;
+          }
+        }
+
+      }
+    }
+  }
+}
