@@ -12,7 +12,7 @@ class AgencyList extends Component {
 
     getDaummap = async () => {
         //daum response
-        const dr = await axios.get("http://dapi.kakao.com/v2/maps/sdk.js?appkey=aa3e232c871be11dfd36ecf912eedeb6");
+        // const dr = await axios.get("http://dapi.kakao.com/v2/maps/sdk.js?appkey=aa3e232c871be11dfd36ecf912eedeb6");
 
         // var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
         // var options = { //지도를 생성할 때 필요한 기본 옵션

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {DashboardPage, AgencyRegisterPage, LoginPage} from 'components/index'
+import {DashboardPage, AgencyRegisterPage, LoginPage, AgencyListPage} from 'components/index'
 
 class App extends Component {
   render() {
@@ -9,6 +9,7 @@ class App extends Component {
           <div>
               <Route exact path="/login" component={LoginPage} />
               <Route path="/dashboard" component={DashboardPage} />
+              <Route path="/agency/list" component={AgencyListPage} />
               <Route path="/agency/register" component={AgencyRegisterPage} />
           </div>
       </Router>
