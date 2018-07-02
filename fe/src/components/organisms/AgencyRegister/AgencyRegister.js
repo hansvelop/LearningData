@@ -5,25 +5,29 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const countryOptions = [
+const facilityList = [
     {
-        text : 'Level',
-        value : ''
+        key : "a1",
+        text : '헬스장',
+        value : 'type1'
     },
     {
-        text : '지점장',
-        value : 't1'
+        key : "a2",
+        text : '필라테스',
+        value : 'type1'
     },
     {
-        text : '운영자',
-        value : 't2'
+        key : "a3",
+        text : '수영장',
+        value : 'type1'
     }
 ]
 
-const registerForm = () =>{
-    return(
-        <div>
-            <div>
+const AgencyRegister = () => {
+    return (
+        <Card color='teal' className={cx('form-wrap')}>
+            <Card.Content header='Agency Register' />
+            <Card.Content >
                 <Form>
                     <Form.Field>
                         <label>Agency ID<span className={cx('req')}>*</span></label>
@@ -34,29 +38,20 @@ const registerForm = () =>{
                         <input placeholder='Agency Name' />
                     </Form.Field>
                     <Form.Field>
-                        <label>Type<span className={cx('req')}>*</span></label>
-                        <Select placeholder='Level' options={countryOptions} />
+                        <label>Facility Type<span className={cx('req')}>*</span></label>
+                        <Select placeholder='Facility Type' options={facilityList} />
                     </Form.Field>
                     <Form.Field>
                         <label>Owner<span className={cx('req')}>*</span></label>
                         <input placeholder='Owner' />
                     </Form.Field>
                 </Form>
-            </div>
-            <Divider />
-            <div>
-                <Button primary>Primary</Button>
-                <Button secondary>Secondary</Button>
-            </div>
-        </div>
-    )
-}
-
-const AgencyRegister = () => {
-    return (
-        <Card color='teal' className={cx('form-wrap')}>
-            <Card.Content header='Agency Register' />
-            <Card.Content description={registerForm} />
+                <Divider />
+                <div className={cx('btn-area')}>
+                    <Button positive>Register</Button>
+                    <Button>Cancel</Button>
+                </div>
+            </Card.Content >
         </Card>
     );
 };

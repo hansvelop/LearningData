@@ -1,0 +1,45 @@
+.user-menu-area{
+  position: absolute;
+  bottom: 6rem;
+  left: 1.5rem;
+  display: none;
+  transition: all 1s ease-out;
+  //애니메이션 설정
+  &.rotateInDownLeft,&.rotateOutUpLeft{
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: block;
+  }
+  .user-menu{
+    .menu-list{
+      cursor: pointer;
+      &:hover{
+        background-color: #deffe2 !important;
+      }
+      &:active{
+        background-color: #bbffc0 !important;
+      }
+    }
+    .menu-list:last-child:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color:  #fff transparent transparent transparent;
+      left: .5rem;
+      bottom: -1.4rem;
+    }
+  }
+  //애니메이션 설정
+  &.flipInY, &.flipOutY{
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+
