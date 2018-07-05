@@ -5,7 +5,14 @@
   display: none;
   transition: all 1s ease-out;
   //애니메이션 설정
-  &.rotateInDownLeft,&.rotateOutUpLeft{
+  &.flipInY{
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: block;
+  }
+  &.flipOutY{
     -webkit-animation-duration: 0.8s;
     animation-duration: 0.8s;
     -webkit-animation-fill-mode: both;
@@ -33,13 +40,6 @@
       left: .5rem;
       bottom: -1.4rem;
     }
-  }
-  //애니메이션 설정
-  &.flipInY, &.flipOutY{
-    -webkit-animation-duration: 0.8s;
-    animation-duration: 0.8s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
   }
 }
 

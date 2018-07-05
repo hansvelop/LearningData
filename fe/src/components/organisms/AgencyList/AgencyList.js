@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import classNames from 'classnames/bind';
 import Styles from './AgencyList.scss';
 
-const cx = classNames.bind(Styles);
+    const cx = classNames.bind(Styles);
 
-class AgencyList extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    class AgencyList extends Component {
     getDaummap = async () => {
         //daum response
         // const dr = await axios.get("http://dapi.kakao.com/v2/maps/sdk.js?appkey=aa3e232c871be11dfd36ecf912eedeb6");

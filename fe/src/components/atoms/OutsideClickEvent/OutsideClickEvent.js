@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import onClickOutside from 'react-onclickoutside';
 
 
@@ -12,10 +12,11 @@ class Content extends Component {
         window.removeEventListener("keydown", this.handleKeyDown);
     }
     handleClickOutside = () => {
-        console.log("ddd");
+        this.props.eventHandel();
     }
     handleKeyDown = (e) => {
         if(e.keyCode === 27) {
+            this.props.eventHandel();
         }
     }
 
@@ -28,17 +29,20 @@ class Content extends Component {
 Content = onClickOutside(Content);
 
 class OutsideClickEvent extends Component {
-
     render() {
-        const { children, active } = this.props;
+        const { children, active, eventHandel } = this.props;
 
-        // if(hidden) return null;
+        let response = children;
 
-        return (
-            <Content eventTypes={["click", "touchend"]}>
-                {children}
-            </Content>
-        )
+        if(active){
+            response = (
+                <Content eventTypes={["click", "touchend"]} eventHandel={eventHandel}>
+                    {children}
+                </Content>
+            )
+        }
+
+        return response;
     }
 }
 
