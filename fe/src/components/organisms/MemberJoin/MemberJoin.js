@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Select, Form, Divider, Button } from 'semantic-ui-react';
-import styles from './AgencyRegister.scss';
+import styles from './MemberJoin.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
@@ -23,7 +23,7 @@ const facilityList = [
     }
 ]
 
-const AgencyRegister = () => {
+const MemberJoin = () => {
     return (
         <Card color='teal' className={cx('form-wrap')}>
             <Card.Content header='Agency Register' />
@@ -56,4 +56,4 @@ const AgencyRegister = () => {
     );
 };
 
-export default AgencyRegister;
+export default MemberJoin;

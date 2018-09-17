@@ -1,0 +1,29 @@
+.crop-area{
+  position: relative;
+  margin-top: 2rem;
+  height: 20rem;
+  color: #fff;
+  .crop-type{
+    width: 100%;
+    text-align: center;
+  }
+  .crop-info{
+    margin: 1rem 0 0 1rem;
+    .left{
+      width: 5rem;
+      float: left;
+      text-align: center;
+      .label{
+        margin: .2rem;
+        float: none;
+        display: table;
+        //width: 4rem;
+      }
+    }
+    .right{
+      p {
+        margin: .75rem;
+      }
+    }
+  }
+}

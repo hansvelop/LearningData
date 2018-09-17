@@ -1,18 +1,24 @@
 import React, {Component} from 'react';
-import { SideArea } from 'components';
+import { Worker } from 'components';
 
 //redux
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as commonActions from 'store/modules/common';
 import * as workerActions from 'store/modules/worker';
 
-class SideAreaContainer extends Component {
-    handleUserMenu = () => {
-        const { CommonActions } = this.props;
-        CommonActions.userMenuModal();
+class WorkerContainer extends Component {
+    setCropData = (data) => {
+        const { WorkerActions } = this.props;
+        WorkerActions.cropInfo(data);
     }
-
+    setCropId = (id) => {
+        const { WorkerActions } = this.props;
+        WorkerActions.cropId(id);
+    }
+    getCropId = () => {
+        const { cropId } = this.props;
+        return cropId;
+    }
     cropTypeChange = (type) => {
         const { WorkerActions } = this.props;
         WorkerActions.cropType(type);
@@ -31,14 +37,15 @@ class SideAreaContainer extends Component {
     }
 
     render() {
-        const {visible,cropInfo,cropType} = this.props;
-        const { handleUserMenu,cropTypeChange } = this;
+        const {visible, cropType, cropId, } = this.props;
+        const { setCropData, setCropId, cropTypeChange } = this;
         return (
-            <SideArea
+            <Worker
                 userMenuVisible={visible}
-                onUserMenuClick={handleUserMenu}
+                cropDataSet={setCropData}
+                setCropId={setCropId}
                 cropTypeChange={cropTypeChange}
-                cropInfo={cropInfo}
+                cropId={cropId}
                 cropType={cropType}
             />
         );
@@ -47,13 +54,12 @@ class SideAreaContainer extends Component {
 
 export default connect(
     (state) => ({
-        visible: state.common.getIn(['modal', 'visible']),
         cropInfo: state.worker.getIn(['crop', 'info']),
         cropType: state.worker.getIn(['crop', 'type']),
+        cropId: state.worker.getIn(['crop', 'id'])
     }),
     (dispatch) => ({
-        CommonActions: bindActionCreators(commonActions, dispatch),
         WorkerActions: bindActionCreators(workerActions, dispatch)
     })
-)(SideAreaContainer);
+)(WorkerContainer);
 

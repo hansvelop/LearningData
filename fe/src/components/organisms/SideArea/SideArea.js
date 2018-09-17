@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Feed,Icon } from 'semantic-ui-react';
-import {UserMenu} from 'components';
+import {UserMenu, CropInfo} from 'components';
 
 import Styles from './SideArea.scss';
 import classNames from 'classnames/bind';
@@ -15,27 +15,23 @@ class SideArea extends Component {
     }
 
     render() {
-        const { onUserMenuClick, userMenuVisible } = this.props;
+        const { onUserMenuClick, userMenuVisible, cropInfo, cropTypeChange, cropType } = this.props;
         const { handleUserMenu } = this;
         return (
             <div className={cx('side-area')}>
-                <div className={cx('main')}>
-                    <Feed.Label className={ cx('icon') }>
-                        <img src={require('static/images/LoraIcon.png')} alt={'logo'} />
-                    </Feed.Label>
-                    <div className={cx('btnBg')} ><Icon name={'plus'} size={'large'} className={cx('add-icon')} /></div>
+                <div className={cx('sub')}>
+                    <div className={cx('header')} >
+                        <Feed.Label className={ cx('logo') }>
+                            <img src={require('static/images/LoraIcon.png')} alt={'logo'} />
+                        </Feed.Label>
+                        <p className={cx('title')}>Learning</p>
+                    </div>
+                    <CropInfo cropInfo={cropInfo} cropTypeChange={cropTypeChange} cropType={cropType} />
+                    <div className={'box'} style={{ width: '100%'}}>
+                        <div className={'img-preview'} style={{ width: '100%', height: 200 }} />
+                    </div>
                     <div className={cx('btnBg bottom')} onClick={handleUserMenu}><Icon name={'user outline'} size={'large'} className={cx('user-icon')} /></div>
                     <UserMenu visible={userMenuVisible} onUserMenuClick={onUserMenuClick}/>
-                </div>
-                <div className={cx('sub')}>
-                    <p className={cx('title')}>Lora Admin</p>
-                    <div className={cx('menu-area')}>
-                        <ul>
-                            <li className={cx('select')}><Icon name={'magento'} size={'big'} /> Agency Manage</li>
-                            <li><Icon name={'user secret'} size={'big'} /> User Manage</li>
-                            <li><Icon name={'setting'} size={'big'} /> Setting</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         );

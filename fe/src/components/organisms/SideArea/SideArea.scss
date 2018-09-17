@@ -3,19 +3,34 @@
   width: 20rem;
   height: 100vh;
   min-height: 30rem;
-  background-color: #3D9970;
+  background-color: #172B4B;
+  z-index: 1000;
   .main {
     width:5rem;
     float: left;
     height: 100%;
-    .icon {
-      img {
-        margin: 1rem .5rem 1rem .5rem;
-        width: 60px;
-        height: 60px;
-        border-radius: 10px;
+  }
+  .sub {
+    //width: 15rem;
+    .header{
+      height: 5rem;
+      .logo {
+        float: left;
+        img {
+          margin: 1rem .5rem 1rem .5rem;
+          width: 60px;
+          height: 60px;
+          border-radius: 10px;
+        }
+      }
+      .title {
+        float: left;
+        font-size: 30px;
+        color: #f2f2f2;
+        margin: 1.3rem 0rem 1rem 1rem;
       }
     }
+
     .btnBg {
       margin-left: 1rem;
       //border-radius: 10px;
@@ -49,23 +64,6 @@
         background-color: #40b384;
       }
     }
-  }
-  .sub {
-    width: 15rem;
-    float: left;
-    height: 100%;
-    .title {
-      font-size: 30px;
-      color: #f2f2f2;
-      margin: 1.3rem 0rem 1rem 1rem;
-    }
-    &.enable {
-      background-color: #3D9970;
-    }
-    &.disable {
-      background-color: #f2f2f2;
-    }
-
     .menu-area{
       margin: 1rem;
       ul {

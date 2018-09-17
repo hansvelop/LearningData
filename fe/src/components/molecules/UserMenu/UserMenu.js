@@ -36,7 +36,7 @@ const UserMenu = (props) => {
                         User Infomation
                     </Menu.Item>
                     <Menu.Item className={cx('menu-list')}>
-                        User Setting
+                        로그아웃
                     </Menu.Item>
                 </Menu>
             </div>
